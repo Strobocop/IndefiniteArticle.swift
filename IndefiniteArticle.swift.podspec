@@ -9,34 +9,27 @@
 Pod::Spec.new do |s|
   s.name             = 'IndefiniteArticle.swift'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of IndefiniteArticle.swift.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.summary          = 'A String extension for providing indefinite articles'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+                        A String extension for providing indefinite articles (a|an)
+                        for a given string.
+                        For example:
+                        *  `String.indefiniteArticle(for: "elipis") => @"an"`
+                        *  `String.indefiniteArticle(for: "taco") => @"a"`
+                        or you can call it on a given string:
+                        * `"historic event".indefiniteArticle() => @"a"`
+                        * `"800 lb gorilla".indefiniteArticle() => @"an"`
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/IndefiniteArticle.swift'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/raymondhytang/IndefiniteArticle.swift'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Raymond Tang' => 'raymondhytang@gmail.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/IndefiniteArticle.swift.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/raymondhytang/IndefiniteArticle.swift.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/raymondhytang'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
-  s.source_files = 'IndefiniteArticle.swift/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'IndefiniteArticle.swift' => ['IndefiniteArticle.swift/Assets/*.png']
-  # }
+  s.source_files = 'Source/*.{swift}'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

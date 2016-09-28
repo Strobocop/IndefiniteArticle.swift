@@ -25,6 +25,8 @@ it, simply add the following line to your Podfile:
 pod "IndefiniteArticle.swift"
 ```
 
+And add `import IndefiniteArticle_swift` to the top of the files using IndefiniteArticle.swift.
+
 ## Author
 
 Raymond Tang, raymondhytang@gmail.com

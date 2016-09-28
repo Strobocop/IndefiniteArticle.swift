@@ -1,0 +1,6 @@
+use_frameworks!
+target 'IndefiniteArticle.swift_Tests' do
+  pod 'IndefiniteArticle.swift', :path => '../'
+  
+  
+end
